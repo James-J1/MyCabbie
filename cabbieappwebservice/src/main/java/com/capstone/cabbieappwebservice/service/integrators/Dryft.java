@@ -34,10 +34,10 @@ public class Dryft extends IntegrationService {
 	}
 
 	@Override
-	public Float getTotal(CabCompany order) {
+	public void setTotal(CabCompany cabcompany) {
 		// TODO Auto-generated method stub
 		//
-		return 20.99f;
+		cabcompany.setTotal(20.99f);
 	}
 
 	@Override

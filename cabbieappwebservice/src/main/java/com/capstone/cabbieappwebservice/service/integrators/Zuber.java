@@ -30,13 +30,13 @@ public class Zuber extends IntegrationService{
 	@Override
 	public CabCompany getCabCompany() {
 		// TODO Auto-generated method stub
-		return null;
+		return cabcompany;
 	}
 
 	@Override
-	public Float getTotal(CabCompany order) {
+	public void setTotal(CabCompany cabcompany) {
 		// TODO Auto-generated method stub
-		return null;
+		cabcompany.setTotal(30.99f);
 	}
 
 	@Override

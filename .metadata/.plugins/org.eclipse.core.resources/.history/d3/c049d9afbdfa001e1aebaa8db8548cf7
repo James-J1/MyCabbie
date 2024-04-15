@@ -1,9 +1,0 @@
-package com.capstone.cabbieappwebservice.model;
-
-public class Payment {
-
-	String ccHolderName;
-	String ccNumber;
-	Int
-	
-}

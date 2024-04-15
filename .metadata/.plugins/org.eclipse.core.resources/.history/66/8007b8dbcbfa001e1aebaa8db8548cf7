@@ -1,7 +1,0 @@
-package com.capstone.cabbieappwebservice.service.integrators;
-
-import com.capstone.cabbieappwebservice.service.IntegrationService;
-
-public class Zuber extends IntegrationService{
-
-}

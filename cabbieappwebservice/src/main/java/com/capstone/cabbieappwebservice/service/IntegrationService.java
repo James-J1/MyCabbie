@@ -10,7 +10,7 @@ public abstract class IntegrationService {
 	// Call cab company API for cabs
 	public abstract CabCompany getCabCompany();
 	// Call cab company to get total for display
-	public abstract Float getTotal(CabCompany order);
+	public abstract void setTotal(CabCompany order);
 	// Send order to cab company
 	public abstract String submitOrder(CabCompany order, Payment payment);
 	

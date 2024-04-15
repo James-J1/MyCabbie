@@ -1,7 +1,0 @@
-package com.capstone.cabbieappwebservice.service;
-
-public interface OrderService {
-
-	public Object addToShoppingCart(Object )
-	
-}

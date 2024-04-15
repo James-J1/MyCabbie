@@ -17,6 +17,9 @@
     <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.service.IntegrationServiceImpl"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.model.Cab"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.service.IntegrationService"/>
+    <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.service.integrators.Dryft"/>
+    <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.service.integrators.Zuber"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
