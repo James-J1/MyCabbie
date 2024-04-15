@@ -1,0 +1,45 @@
+package com.capstone.cabbieappwebservice.model;
+
+import java.util.ArrayList;
+
+/*
+ * Class envelope for cabs for spec
+ */
+public class CabCompany {
+	String cabCompanyName; //displayed in front end
+	Float cabCompanyRate; //displayed in front end
+	ArrayList<CabCompany> cabCompanies; //populated by front end
+	public CabCompany() {
+		// TODO Auto-generated constructor stub
+	}
+	public CabCompany(String cabCompanyName, Float cabCompanyRate, ArrayList<CabCompany> cabCompanies) {
+		super();
+		this.cabCompanyName = cabCompanyName;
+		this.cabCompanyRate = cabCompanyRate;
+		this.cabCompanies = cabCompanies;
+	}
+	public String getCabCompanyName() {
+		return cabCompanyName;
+	}
+	public void setCabCompanyName(String cabCompanyName) {
+		this.cabCompanyName = cabCompanyName;
+	}
+	public Float getCabCompanyRate() {
+		return cabCompanyRate;
+	}
+	public void setCabCompanyRate(Float cabCompanyRate) {
+		this.cabCompanyRate = cabCompanyRate;
+	}
+	public ArrayList<CabCompany> getCabCompanies() {
+		return cabCompanies;
+	}
+	public void setCabCompanies(ArrayList<CabCompany> cabCompanies) {
+		this.cabCompanies = cabCompanies;
+	}
+	@Override
+	public String toString() {
+		return "CabCompany [cabCompanyName=" + cabCompanyName + ", cabCompanyRate=" + cabCompanyRate + ", cabCompanies="
+				+ cabCompanies + "]";
+	}
+
+}

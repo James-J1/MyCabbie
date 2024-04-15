@@ -1,0 +1,9 @@
+package com.capstone.cabbieappwebservice.model;
+
+public class Response {
+	boolean success;
+	String message;
+	public Response() {
+		// TODO Auto-generated constructor stub
+	}
+}

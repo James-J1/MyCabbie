@@ -1,0 +1,63 @@
+package com.capstone.cabbieappwebservice.model;
+/*
+ * Class represents a cab common to all cab companies
+ */
+public class Cab {
+	int id;
+	String cabCompanyId;
+	String driver;
+	String number;
+	String destination;
+	int minutesETA;
+	public Cab() {
+		// TODO Auto-generated constructor stub
+	}
+	public Cab(int id, String cabCompanyId, String driver, String number, String destination,
+			int minutesETA) {
+		this.id = id;
+		this.cabCompanyId = cabCompanyId;
+		this.driver = driver;
+		this.number = number;
+		this.destination = destination;
+		this.minutesETA = minutesETA;
+	}
+	public String getCabCompanyId() {
+		return cabCompanyId;
+	}
+	public void setCabCompanyId(String cabCompanyId) {
+		this.cabCompanyId = cabCompanyId;
+	}
+	public String getDriver() {
+		return driver;
+	}
+	public void setDriver(String driver) {
+		this.driver = driver;
+	}
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	public int getId() {
+		return id;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+	public int getMinutesETA() {
+		return minutesETA;
+	}
+	public void setMinutesETA(int minutesETA) {
+		this.minutesETA = minutesETA;
+	}
+	@Override
+	public String toString() {
+		return "Cab [id=" + id + ", cabCompanyId=" + cabCompanyId + ", driver="
+				+ driver + ", number=" + number + ", destination=" + destination + ", minutesETA=" + minutesETA + "]";
+	}
+	
+}

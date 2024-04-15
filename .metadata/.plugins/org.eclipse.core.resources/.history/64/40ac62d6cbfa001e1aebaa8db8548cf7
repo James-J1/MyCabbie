@@ -1,0 +1,5 @@
+package com.capstone.cabbieappwebservice.service.integrators;
+
+public class Zuber extends Inte{
+
+}

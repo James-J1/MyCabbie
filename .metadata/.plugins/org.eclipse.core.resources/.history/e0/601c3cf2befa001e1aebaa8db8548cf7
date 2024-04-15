@@ -1,0 +1,6 @@
+package com.capstone.cabbieappwebservice.model;
+
+public class Response {
+	boolean success;
+	String message;
+}

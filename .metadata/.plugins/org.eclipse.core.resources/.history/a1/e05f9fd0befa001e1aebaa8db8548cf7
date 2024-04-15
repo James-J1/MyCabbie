@@ -1,0 +1,10 @@
+package com.capstone.cabbieappwebservice.service;
+
+public interface OrderService {
+
+	public Object addToShoppingCart(CabCompany order);
+	public Object getTotal(Object order);
+	public Object submitOrder(Object order);
+	public Object[] getCabs();
+	
+}

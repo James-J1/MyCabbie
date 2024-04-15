@@ -1,0 +1,2 @@
+spring.application.name=myCabbie
+server.port=8081

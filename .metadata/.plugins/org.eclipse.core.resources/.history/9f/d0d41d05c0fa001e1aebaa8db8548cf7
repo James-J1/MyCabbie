@@ -1,0 +1,12 @@
+package com.capstone.cabbieappwebservice.service;
+
+/*
+ * Interface responsible for integrating with the cab company API
+ */
+public interface IntegrationService {
+
+	public String getCabs();
+	public String getTotal();
+	
+	
+}

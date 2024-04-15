@@ -1,0 +1,14 @@
+package com.capstone.cabbieappwebservice.model;
+
+public class Payment {
+
+	String ccHolderName;
+	String ccNumber;
+	Integer expMonth;
+	Integer expYear;
+	Integer cvv;
+	public Payment() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

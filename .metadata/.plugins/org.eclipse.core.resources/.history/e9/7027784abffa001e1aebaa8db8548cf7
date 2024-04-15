@@ -1,0 +1,14 @@
+package com.capstone.cabbieappwebservice.service;
+
+import com.capstone.cabbieappwebservice.model.CabCompany;
+
+
+/Interface responsible for defining interaction between frontend and backend
+public interface OrderService {
+
+	public Object addToShoppingCart(CabCompany order);
+	public Object getTotal(Object order);
+	public Object submitOrder(Object order);
+	public Object[] getCabs();
+	
+}

@@ -1,0 +1,15 @@
+package com.capstone.cabbieappwebservice.service;
+
+import com.capstone.cabbieappwebservice.model.CabCompany;
+import com.capstone.cabbieappwebservice.model.Payment;
+
+/*
+ * Interface responsible for integrating with the cab company API
+ */
+public interface IntegrationService {
+	//Call cab company API for cabs
+	public String getCabs();
+	public String getTotal(CabCompany order);
+	public String submitOrder(CabCompany order, Payment payment);
+	
+}
