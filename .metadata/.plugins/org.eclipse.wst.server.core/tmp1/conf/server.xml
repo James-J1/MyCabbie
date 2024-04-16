@@ -140,7 +140,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\jesse\Course3\capstone\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\jesse\Course3\capstone\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\CapstoneCabbie" path="/CapstoneCabbie" reloadable="true" source="org.eclipse.jst.jee.server:CapstoneCabbie"/></Host>
+      <Context docBase="C:\Users\jesse\OneDrive\Desktop\Course3Capstone\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\jesse\OneDrive\Desktop\Course3Capstone\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\CapstoneCabbie" path="/CapstoneCabbie" reloadable="true" source="org.eclipse.jst.jee.server:CapstoneCabbie"/><Context docBase="C:\Users\jesse\OneDrive\Desktop\Course3Capstone\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\cabbieappwebservice" path="/cabbieappwebservice" reloadable="true" source="org.eclipse.jst.jee.server:cabbieappwebservice"/></Host>
     </Engine>
   </Service>
 </Server>

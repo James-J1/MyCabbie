@@ -36,9 +36,9 @@ INDEX VERSION 1.134+C:\Users\jesse\OneDrive\Desktop\Course3Capstone\.metadata\.p
 622664975.index
 3868741704.index
 2915537701.index
-3962214095.index
-426570913.index
 1320525899.index
+426570913.index
+3962214095.index
 2741850702.index
 1898241528.index
 1675343918.index
@@ -52,8 +52,8 @@ INDEX VERSION 1.134+C:\Users\jesse\OneDrive\Desktop\Course3Capstone\.metadata\.p
 4155570989.index
 181328135.index
 4058944906.index
-834239853.index
 1166408365.index
+834239853.index
 2936623381.index
 4034699412.index
 3389063593.index

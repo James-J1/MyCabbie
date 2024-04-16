@@ -22,4 +22,6 @@
     <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.service.integrators.Dryft"/>
     <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.service.integrators.Zuber"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.capstone.cabbieappwebservice.model.Order"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
 </qualifiedTypeNameHistroy>
