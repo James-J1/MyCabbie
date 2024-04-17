@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CabbieService } from '../../service/cabbiesrv.service';
 import { Cab } from '../../model/cab';
-import { Cabcompany } from '../../model/cabcompany';
+  
 
 @Component({
   selector: 'app-cabs',
@@ -22,7 +22,7 @@ export class CabsComponent {
   removeItem(item: Cab): void {
     this.cabs = this.cabs.filter((i) => { i.number != item.number })
   }
-  addtoShoppingCart(item: Cab): void {
+  addtoShoppingCart(): void {
     this.cabCompany.cabs = this.cabs
     this.cabbieSrv.addToShoppingCart(this.cabCompany)
   }

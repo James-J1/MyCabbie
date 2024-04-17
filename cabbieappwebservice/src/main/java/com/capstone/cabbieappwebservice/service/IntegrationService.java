@@ -12,6 +12,6 @@ public abstract class IntegrationService {
 	// Call cab company to get total for display
 	public abstract void setTotal(CabCompany order);
 	// Send order to cab company
-	public abstract String submitOrder(CabCompany order, Payment payment);
+	public abstract String submitOrder(CabCompany cabCompany, Payment payment);
 	
 }

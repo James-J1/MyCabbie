@@ -40,11 +40,16 @@ public class Dryft extends IntegrationService {
 		cabcompany.setTotal(20.99f);
 	}
 
-	@Override
-	public String submitOrder(CabCompany order, Payment payment) {
+/*	@Override
+	public String submitOrder(ArrayList<CabCompany> , Payment payment) {
 		// TODO Auto-generated method stub
 		// call cab company API for submission
 		return "success";
+	}
+*/
+	public String submitOrder(CabCompany order, Payment payment) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

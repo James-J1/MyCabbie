@@ -2,11 +2,14 @@ package com.capstone.cabbieappwebservice.controller;
 
 import java.util.ArrayList;	
 import java.util.HashMap;
+import java.util.Iterator;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.capstone.cabbieappwebservice.model.CabCompany;
@@ -17,6 +20,7 @@ import com.capstone.cabbieappwebservice.service.IntegrationService;
 import com.capstone.cabbieappwebservice.service.integrators.Dryft;
 import com.capstone.cabbieappwebservice.service.integrators.Zuber;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
 public class AppController {
@@ -27,7 +31,6 @@ public class AppController {
 	
 	
 	public AppController() {
-		// TODO Auto-generated constructor stub
 		System.out.println("[AppController] constructor called.");
 		shoppingCart = new HashMap<String, CabCompany>();
 		integrators = new HashMap<String, IntegrationService>();
@@ -37,13 +40,14 @@ public class AppController {
 		integrators.put(integrator1.getCabCompany().getCabCompanyName(), integrator1);
 		integrators.put(integrator2.getCabCompany().getCabCompanyName(), integrator2);
 	}
-	
+
 	@PostMapping("/addtoshoppingcart")
-	public ArrayList<CabCompany> addToShoppingCart(CabCompany cabCompany) {
+	public ArrayList<CabCompany> addToShoppingCart(@RequestBody CabCompany cabCompany) {
 		System.out.println("[AppController] addToShoppingCart called.");
 		shoppingCart.put(cabCompany.getCabCompanyName(), cabCompany);
-		while(shoppingCart.keySet().iterator().hasNext()) {
-			String key = shoppingCart.keySet().iterator().next();
+		Iterator<String> itr = shoppingCart.keySet().iterator();
+		while(itr.hasNext()) {
+			String key = (String) itr.next();
 			IntegrationService integrator  = integrators.get(key);
 			CabCompany scCabCompany = shoppingCart.get(key);
 			integrator.setTotal(scCabCompany);
@@ -51,7 +55,7 @@ public class AppController {
 		
 		return new ArrayList<CabCompany>(shoppingCart.values()) ;
 	}
-	
+
 	@PostMapping("/removefromshoppingcart")
 	public ArrayList<CabCompany> removeFromShoppingCart(CabCompany cabcompany) {
 		shoppingCart.remove(cabcompany.getCabCompanyName(), cabcompany);
@@ -65,24 +69,26 @@ public class AppController {
 		return new ArrayList<CabCompany>(shoppingCart.values()) ;
 		
 	}
+
 	@GetMapping("/getshoppingcart")
 	public ArrayList<CabCompany> getShoppingCart(){
 		return new ArrayList<CabCompany>(shoppingCart.values());
 	}
-	
+
 	@GetMapping("/getcabcompanies")
 	public ArrayList<CabCompany> getCabCompanies(){
 		System.out.println("[AppController] getCabCompanies called.");
 		ArrayList<CabCompany> cabCompanies = new ArrayList<CabCompany>();
-		while(integrators.keySet().iterator().hasNext()) {
-			String key = integrators.keySet().iterator().next();
+		Iterator<String> itr = integrators.keySet().iterator();
+		while(itr.hasNext()) {
+			String key = itr.next();
 			cabCompanies.add(integrators.get(key).getCabCompany());
 		}
 		return cabCompanies;
 	}
-	
+
 	@GetMapping("/getcabcompany")
-	public CabCompany getCabCompany(String inegratorName) {
+	public CabCompany getCabCompany(@RequestParam String inegratorName) {
 		System.out.println("[AppController] getCabCompany called.");
 		IntegrationService integrator = integrators.get(inegratorName);
 		
@@ -95,7 +101,7 @@ public class AppController {
 	public Response submitOrder(@RequestBody Order order) {
 		System.out.println("[AppController] submitOrder called.");
 
-		IntegrationService integrator = integrators.get(order.getCabcompany());
+		IntegrationService integrator = integrators.get(order.getCabcompany().getCabCompanyName());
 		integrator.submitOrder(order.getCabcompany(), order.getPayment());
 		
 		Response response = new Response();

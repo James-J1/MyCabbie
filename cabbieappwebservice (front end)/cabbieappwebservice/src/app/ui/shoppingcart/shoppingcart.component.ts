@@ -4,6 +4,7 @@ import { Cabcompany } from '../../model/cabcompany';
 import { Payment } from '../../model/payment';
 import { Order } from '../../model/order';
 
+
 @Component({
   selector: 'app-shoppingcart',
   templateUrl: './shoppingcart.component.html',
@@ -15,7 +16,7 @@ export class ShoppingcartComponent {
 
   constructor(public cabbieSrv:CabbieService){ 
     this.cabCompanies = new Array<Cabcompany>
-    this.payment
+    this.payment = new Payment()
     this.getShoppingCart()
   }
   getShoppingCart():void{
@@ -25,8 +26,12 @@ export class ShoppingcartComponent {
     this.cabCompanies = this.cabCompanies.filter( (c) => c.cabCompanyName != cabcompany.cabCompanyName)
   }
   submitOrder():void{
-    let order:Order = new Order()
-    order.cabcompany = this.cab
+    for(let c of this.cabCompanies){
+      let order:Order = new Order();
+      order.cabcompany = c
+      order.payment = this.payment
+      this.cabbieSrv.submitOrder(order);
+    }
   }
 
 }

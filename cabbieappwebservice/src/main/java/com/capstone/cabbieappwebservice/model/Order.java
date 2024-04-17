@@ -1,24 +1,22 @@
 package com.capstone.cabbieappwebservice.model;
 
-import java.util.ArrayList;
 
 public class Order {
 	
-	ArrayList<CabCompany> cabcompanies;
+	CabCompany cabCompany;
 	Payment payment;
 	public Order() {
 		// TODO Auto-generated constructor stub
 	}
-	public Order(ArrayList<CabCompany> cabcompanies, Payment payment) {
-		super();
-		this.cabcompanies = cabcompanies;
+	public Order(CabCompany cabCompany, Payment payment) {
+		this.cabCompany = cabCompany;
 		this.payment = payment;
 	}
-	public ArrayList<CabCompany> getCabcompany() {
-		return cabcompanies;
+	public CabCompany getCabcompany() {
+		return cabCompany; 
 	}
-	public void setCabcompany(ArrayList<CabCompany> cabcompanies) {
-		this.cabcompanies = cabcompanies;
+	public void setCabcompany(CabCompany cabcompany) {
+		this.cabCompany = cabcompany;
 	}
 	public Payment getPayment() {
 		return payment;
@@ -28,6 +26,6 @@ public class Order {
 	}
 	@Override
 	public String toString() {
-		return "Order [cabcompany=" + cabcompanies + ", payment=" + payment + "]";
+		return "Order [cabcompany=" + cabCompany + ", payment=" + payment + "]";
 	}
 }

@@ -8,14 +8,22 @@ import { CabbieService } from '../../service/cabbiesrv.service';
   styleUrl: './cabcompanies.component.css'
 })
 export class CabcompaniesComponent {
-  cabcompany:Cabcompany = new Cabcompany()
-  constructor(public cabbieSrv:CabbieService){}
+  cabCompanies: Array<Cabcompany>
 
-  getCabCompanies():Array<Cabcompany> {
-    return this.cabbieSrv.getCabCompanies()
+  constructor(public cabbieSrv: CabbieService) {
+    this.cabCompanies = new Array<Cabcompany>
+    this.getCabCompanies()
   }
-  selectCabCompany():void{
-    
+
+  getCabCompanies(): void {
+    this.cabbieSrv.getCabCompanies().subscribe({
+      next: (data: any) => { this.cabCompanies = data },
+      error: (error: any) => { console.log("[CabCompaniesComponent] getCabCompanies error", error) },
+      complete: () => { console.log("[CabCompaniesComponent] getCabCompanies complete") }
+    })
+  }
+  selectCabCompany(cabcompany: Cabcompany): void {
+    console.log("[CabCompanies Component] selectCabCompany " + cabcompany.cabCompanyName)
   }
 
 }
