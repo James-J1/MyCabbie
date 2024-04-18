@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center">
+  <ul class="list-group">
+    <h1>Select a cab</h1><br />
+    <li *ngFor="let item of cabCompany.cabs" class="list-group-item d-flex justify-content-center align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{item.cabType}}</div>
+        {{item.description}}
+        <br />
+        <input class="form-check-input" type="checkbox" value="">
+      </div>
+
+      <span class="badge text-bg-secondary rounded-pill">${{item.rate}}/mile</span>
+    </li>
+  </ul>
+
+</div>

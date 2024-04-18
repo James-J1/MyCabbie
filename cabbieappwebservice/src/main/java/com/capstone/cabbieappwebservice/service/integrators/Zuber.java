@@ -16,10 +16,9 @@ public class Zuber extends IntegrationService{
 		cabcompany.setCabCompanyName("Zuber");
 		cabcompany.setCabCompanyRate(10.99);
 		
-		Cab cab1 = new Cab("","Larry","01","",3,0,10.99f );
-		Cab cab2 = new Cab("","Carrie","02","",5,0,15.99f);
-		Cab cab3 = new Cab("","Thomas","02","",10,0,30.99f);
-		
+		Cab cab1 = new Cab("", "Sports Vehicle","A two-door sports vehicle for traveling in style", "Barry", "01", "", 0, 1, 10.99);
+		Cab cab2 = new Cab("", "Full-Size","A luxury full-size sedan complete with amenities", "Carrie", "02", "", 0, 6, 15.99);
+		Cab cab3 = new Cab("", "The Limousine","Take your party wherever they want in extreme comfor and luxury with this 15 person capacity limo", "Thomas", "03", "", 0, 15,30.99);
 		ArrayList<Cab> cabs = new ArrayList<Cab>();
 		cabs.add(cab1);
 		cabs.add(cab2);

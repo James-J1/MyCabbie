@@ -4,23 +4,26 @@ package com.capstone.cabbieappwebservice.model;
  */
 public class Cab {
 	String cabCompanyId;
+	String cabType;
+	String description;
 	String driver;
 	String number;
 	String destination;
+	Integer distance;
 	Integer maxNumPassenger;
-	int minutesETA;
-	float rate;
+	double rate;
 	public Cab() {
 		// TODO Auto-generated constructor stub
 	}
-	public Cab(String cabCompanyId, String driver, String number, String destination, Integer maxNumPassenger,
-			int minutesETA, float rate) {
+	public Cab(String cabCompanyId, String cabType, String description, String driver, String number, String destination, Integer maxNumPassenger, Integer distance, double rate) {
 		this.cabCompanyId = cabCompanyId;
+		this.cabType = cabType;
+		this.description = description;
 		this.driver = driver;
 		this.number = number;
 		this.destination = destination;
 		this.maxNumPassenger = maxNumPassenger;
-		this.minutesETA = minutesETA;
+		this.distance = distance;
 		this.rate =rate;
 	}
 	public String getCabCompanyId() {
@@ -28,6 +31,21 @@ public class Cab {
 	}
 	public void setCabCompanyId(String cabCompanyId) {
 		this.cabCompanyId = cabCompanyId;
+	}
+	public String getCabType() {
+		return cabType;
+	}
+	public void setCabType(String cabType) {
+		this.cabType = cabType;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public String description() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public String getDriver() {
 		return driver;
@@ -53,12 +71,7 @@ public class Cab {
 	public void setMaxNumPassenger(Integer maxNumPassenger) {
 		this.maxNumPassenger = maxNumPassenger;
 	}
-	public int getMinutesETA() {
-		return minutesETA;
-	}
-	public void setMinutesETA(int minutesETA) {
-		this.minutesETA = minutesETA;
-	}
+
 	public double getRate() {
 		return rate;
 	}
@@ -67,9 +80,10 @@ public class Cab {
 	}
 	@Override
 	public String toString() {
-		return "Cab [cabCompanyId=" + cabCompanyId + ", driver=" + driver + ", number=" + number + ", destination="
-				+ destination + ", maxNumPassenger=" + maxNumPassenger + ", minutesETA=" + minutesETA + ", rate=" + rate
-				+ "]";
+		return "Cab [cabCompanyId=" + cabCompanyId + ", cabType=" + cabType + ", description=" + description
+				+ ", driver=" + driver + ", number=" + number + ", destination=" + destination + ", distance="
+				+ distance + ", maxNumPassenger=" + maxNumPassenger + ", rate=" + rate + "]";
 	}
+	
 
 }
